@@ -1,0 +1,9 @@
+key.key
+.terraform*
+user*.yml
+key.key
+start.sh
+.terraform
+.vscode
+*.tfstate*
+local_key.tf

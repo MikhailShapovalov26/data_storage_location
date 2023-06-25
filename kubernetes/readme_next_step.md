@@ -141,3 +141,18 @@ ServiceAccount, разница пользователя и SA в том, что 
 ### kubectl-debug
 https://github.com/aylei/kubectl-debug
 https://learnk8s.io/troubleshooting-deployments
+
+### Control Plane
+
+правляющий уровень Kubernetes состоит из 4-х объектов, которые расположены на Мастер-Нодах. Для отказоустойчивости кластера рекомендуем соблюдать кворум Мастеров например, 3 Мастер-Ноды.
+
+![Alt text](image.png)
+
+Data Plane
+Компонентами на Воркер-Нодах являются runtime, kubelet и kube-proxy.
+
+![Alt text](image-1.png)
+
+поиск проблемы в поде если нет ответа в логах и describe
+
+    sudo journalctl -u kubelet | grep <podname>

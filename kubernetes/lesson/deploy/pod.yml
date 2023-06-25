@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+  namespace: lesson14
+  labels:
+    name: goweb 
+spec:
+  containers:
+  - name: web
+    image: mshapovalov/lesson1:v01
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - name: web 
+        containerPort: 8080
+        protocol: TCP

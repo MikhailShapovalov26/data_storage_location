@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: declarative-deploy
+  namespace: lesson14
+  labels:
+    app: go-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: goapp
+  template:
+    metadata:
+      labels:
+        app: goapp
+    spec:
+      containers:
+      - name: goapp
+        image: mshapovalov/lesson1:v01
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 8080

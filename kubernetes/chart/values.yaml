@@ -1,0 +1,5 @@
+image: mshapovalov/lesson1:v01
+replicas: 3
+secret:
+  name: load-secret
+  password: loadqwerty

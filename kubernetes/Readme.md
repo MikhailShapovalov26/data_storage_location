@@ -1,4 +1,4 @@
-#K8S
+# K8S kubectl
 
 Перед применением этого файла YAML вам необходимо создать секрет с именем postgres-secret, содержащим пароль Postgres. Вы можете сделать это, запустив:
 
@@ -24,15 +24,15 @@
 
 Далее делаем деплой
 
-docker pull mshapovalov/lesson1:v01
+    docker pull mshapovalov/lesson1:v01
 
 В данном случае, мы императивно создали Деплоймент first-deployment, используя для Пода образ который запушили выше в докер хаб
 
 Проверить можно 
 
-kubectl get deployments
+    kubectl get deployments
 
-kubectl get pod
+    kubectl get pod
 
 Для переключения между кластером Кубернетес используйте команды :
 
